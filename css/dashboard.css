@@ -1,0 +1,265 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    /*outline: 1px solid black;*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #555;
+    position: relative;
+}
+
+a:link {
+    text-decoration: none;
+}
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+/** margins */
+.m-t-10 {
+    margin-top: 10px;
+}
+.m-t-20 { margin-top: 20px;}
+.m-t-30 { margin-top: 30px;}
+.m-t-40 { margin-top: 40px;}
+
+/** top header */
+.top-header {
+    background-color: #394e61;
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.07);
+}
+.move-right .top-header-container {
+    margin-left: 250px;
+}
+
+.top-header-container:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.top-header-nav ul{
+    list-style: none;
+}
+.top-header-nav > ul {
+    margin: 0;
+    width: 100%;
+}
+.top-header-nav ul li, .header-logo-holder {
+    float: left;
+}
+.header-logo-holder {
+    height: 60px;
+}
+.header-logo-holder img {
+    height: 100%;
+    margin: 10px 10px 0 10px;
+}
+
+.top-header-nav a {
+    display: inline-block;
+    color: #eee;
+    padding: 30px 15px;
+}
+.top-header-nav li:last-child {
+    float: right;
+}
+
+.top-header-nav a:focus,
+.top-header-nav a:hover,
+.top-header-nav a:active {
+    background-color: #2d3d4c;
+    color: #fff;
+}
+
+
+/** sidebar styles */
+.sidebar {
+    position: absolute;
+    width: 250px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2d3d4c;
+    height: 100vh;
+}
+.sidebar-profile-img {
+    margin: 50px auto 30px auto;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.sidebar-profile-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar li {
+    text-align: center;
+    font-size: 110%;
+}
+.sidebar a {
+    color: #ddd;
+    display: inline-block;
+    padding: 15px 15px;
+    width: 100%;
+    border-bottom: 1px solid #13191f;
+}
+.sidebar a:visited {
+    color: #ddd;
+}
+.sidebar a:focus, .sidebar a:hover, .sidebar a:active {
+    background-color: #24303b;
+    color: #fff;
+}
+
+/** Main Content */
+.content {
+    margin-left: 250px;
+    padding: 10px 20px 50px;
+    line-height: 1.5em;
+}
+
+/** Layout grid */
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.l-wrap-fluid {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/** Clearing floated children */
+.col-grid:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+/** For a 4-column grid */
+.four-col-grid .grid-item {
+    width: calc((100% - 20px * 4) / 4);
+    float: left;
+}
+
+.stat-widget {
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.07), 
+                0 15px 35px 0 rgba(56, 56, 56, 0.2);
+}
+.stat-widget h2 {
+    font-size: 160%;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.stat-widget p {
+    font-size: 150%;
+}
+.stat-container {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/** Table style */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table thead th {
+    padding: 10px 5px;
+}
+.table tbody td {
+    padding: 10px 5px;
+}
+.table tr {
+    border: 1px solid black;
+}
+.table td {
+    text-align: center;
+}
+
+/** table-primary */
+.table-primary {
+    border: 1px solid #2d3d4c;
+}
+.table-primary thead {
+    background-color: #2d3d4c;
+    color: #fff;
+}
+
+/** card */
+.card {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.card .card-header {
+    padding: 10px 15px;
+}
+.card .card-body {
+    padding: 10px, 15px;
+}
+
+.card-primary {
+    border-color: #2d3d4c;
+}
+
+.card-primary .card-header {
+    background-color: #2d3d4c;
+    color: #fff;
+}
+
+/** img-thumbnail */
+.user-profile-picture {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px;
+    height: 120px;
+    max-height: 120px;
+    width: 150px;
+    max-width: 150px;
+}
+.user-profile-picture img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.user-picture-container, .user-profile-details {
+    float: left;
+}
+.user-profile-picture {
+    margin-right: 20px;
+}
+.user-profile-details {
+    width: 70%;
+}
